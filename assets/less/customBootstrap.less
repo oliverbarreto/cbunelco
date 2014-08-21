@@ -1,0 +1,19 @@
+//
+// Central CSS File to compile
+// // This is the new “central” file that you’ll compile to CSS. Along with the original LESS files, it imports the two custom files above using the following commands:
+// --------------------------------------------------
+
+// This is the central file. It imports all of the others and is the one you’ll ultimately compile.
+@import "../bootstrapLessV3.0.3/less/bootstrap.less";
+
+// I make a copy of variables.less from Bootstrap’s source and modify the variables in this copy instead.
+@import "customVariables.less";
+
+// This file holds any other customizations that I want to make that aren’t possible with the variables.
+@import "customCSS.less";
+
+// This is always the last file to be imported, in order for the classes that it contains to override the rest of the styles where necessary.
+@import "../bootstrapLessV3.0.3/less/utilities.less";
+
+// Import Social Media Icons. http://shalinguyen.github.io/socialicious/
+@import "socialicious.less";

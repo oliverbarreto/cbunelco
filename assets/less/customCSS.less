@@ -1,0 +1,810 @@
+//
+// Customization not possible with Bootstrap Variables 
+// --------------------------------------------------
+
+// UNELCO Basic Palette Colors
+// -------------------------
+@red-UNELCO-darker:            #b21823;
+@red-UNELCO-dark:              #c81b27;
+@red-UNELCO:                   #DF1F2C;
+@red-UNELCO-light:             #e23541;
+@red-UNELCO-lighter:           #e54b56;
+
+ 
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+/* to include a second level of page below the footer */
+/*
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+*/
+
+/* CUSTOMIZE THE MAIN STYILING ELEMENTS
+-------------------------------------------------- */
+// Links
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: none;
+  }
+}
+
+// Custom Image Resizing
+.custom-images{
+  max-width: 800px;
+  max-height: 400px;
+}
+
+.premios {
+  ul {
+    list-style-type: none;
+    padding:0; 
+    margin:0;
+  }
+}
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+// Navbar Logo
+
+.navbar-default {
+  opacity: 0.90;
+}
+
+// Navbar Toggle Button Styling
+.navbar-default .navbar-toggle {
+  border-color: @white;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+  outline-color: @orange-lighter;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-wrapper .navbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-menus {
+  li {
+    font-size:  @font-size-navbar-menus;
+  }
+}
+
+/* NavBar Default Color gradien */
+ 
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  color:            @white;
+  background-color: #424a53;
+  background: transparent url(../img/feature-background-texture-dark.png) center center repeat;
+
+  a {
+    color: @white;
+  }
+
+  a:hover{
+      color: @red-UNELCO-dark; 
+      text-decoration: none;
+  }
+
+  a:visited{
+      text-decoration: none;
+  }
+}
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+
+#wrap > .container-narrow {
+  padding: 15px 15px 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+@carousel-item-bg:                    transparent;
+@carousel-size-height:                410px;
+@carousel-size-height-small-devices:  275px;
+
+/* Carousel base class */
+.carousel {
+  height: @carousel-size-height;
+  margin-bottom: 60px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  //width: 1140;
+  height: @carousel-size-height;
+  background-color: @carousel-item-bg;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: @carousel-size-height;
+}
+
+.carousel-indicators {
+  li {
+    background-color: #a1a1a1;
+  }
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  // Set gradients for backgrounds
+  // REMOVED controls gradients in BOOTSTRAP CAROUSEL.CSS Directly !!!
+
+  &.left {
+    //#gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+  }
+  &.right {
+    left: auto;
+    right: 0;
+    //#gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+  }
+
+  // Toggles
+  .icon-prev,
+  .icon-next,
+  .glyphicon-chevron-left,
+  .glyphicon-chevron-right {
+    top: @carousel-size-height + 10px;
+  }
+  .icon-prev,
+  .glyphicon-chevron-left {
+    left: 500%;
+  }
+  .icon-next,
+  .glyphicon-chevron-right {
+    right: 500%;
+  }
+  .icon-prev,
+  .icon-next {
+    width:  20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-family: serif;
+  }
+}
+
+// Optional indicator pips
+// ---------------------------
+
+.carousel-indicators {
+  position: absolute;
+  top: @carousel-size-height + 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+
+// Optional captions
+// -----------------------------
+
+.carousel-caption {
+  position: absolute;
+  left: 5%;
+  right: 25%;
+  bottom: 40px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: @carousel-caption-color;
+  text-align: left;
+  text-shadow: @gray-fixed;
+  //  text-shadow: @carousel-text-shadow;
+  & .btn {
+    text-shadow: none; // No shadow for button elements in carousel-caption
+  }
+}
+
+// Special captions for Custom Video Section
+// ------------------------------------------
+.carousel-special{
+  background-color: @white;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  z-index: 50;
+  .carousel-special-caption{
+    z-index: -100;
+  }
+}
+
+.carousel .video-wrapper {
+  background: #000;
+  width: 554px; 
+  height: 311;
+  position: absolute;
+  right: -20px;
+  top: 85px;
+}
+
+.hero.video .video-wrapper iframe {
+  height: 100%;
+  width: 100%;
+}
+
+// Videos
+.videos-mainvideo{
+  margin: 30px;
+  .center-block();
+
+  .video-wrapper {
+    iframe{
+      width:  728px;
+      height: 410px;
+    }
+
+    video{
+      width:  728px;
+      height: 410px;
+    }
+  }
+}
+
+// Images
+.image-mainimage{
+
+  .center-block();
+
+  .image-wrapper > img{
+    max-width: 100%;
+    max-height: 75%;
+  }
+}
+
+  /* CUSTOMIZE THE DOCUMENTS SECTIONS
+  -------------------------------------------------- */
+  .docs {
+    background-color: @orange-light;
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    margin-top: 15px; 
+    padding: 30px;
+    margin:  30px;
+    color: @white;
+    text-decoration: none;
+
+    a{
+      color:@white;
+    }
+
+    a:hover{
+        color: @orange-darker; 
+        text-decoration: none;
+    }
+    a:visited{
+        text-decoration: none;
+    }
+
+    a.doc-download{
+      color:@orange;
+    }
+
+  }
+
+
+  .docs ul {
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+  }
+  
+  .docs ul li {
+    // background: url('https://dl.dropboxusercontent.com/u/72881710/Mockup/assets/img/documenticon32x32.png') no-repeat top left;
+    background-repeat:no-repeat;
+    background-position:0px 0px; 
+    min-height: 30px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    
+  }
+  
+  
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.s-circle {
+  .center-block();
+  width:150px;
+  height: 150px;
+
+  padding:50px 0;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius:50px;
+  font-size:@font-size-h1;
+  font-weight:bold;
+  background-color: @red-UNELCO;
+
+  a{
+    color: @white;
+    &:hover{
+      color: #111;
+    }
+  }
+}
+
+/* Featurettes
+------------------------- */
+.featurette{
+  background: transparent url(../img/feature-background-gradient-transparent.png) center center no-repeat;
+  background-size: cover;
+
+  .lead{
+    padding-left: 30px;
+  }
+}
+
+.featurette-divider{
+//  margin: 50px 0; /* Space out the Bootstrap <hr> more */
+  margin: 0px 0px 60px 0px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading{
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: @red-UNELCO-dark;
+  padding-left: 30px;
+
+  .text-muted{
+    font-size:  35px;
+    color: @red-UNELCO;
+  }
+
+}
+
+.featurette-image{
+  padding: 10px;
+}
+
+
+/* CUSTOMIZE JUMBOTRONS and other stuff
+-------------------------------------------------- */
+// Reduce Top Space
+.jumbotron-top-close{
+  padding-top: 5px;
+}
+
+.jumbotron{
+  margin-bottom: 0px;
+
+  h1 {
+    margin-top: 0px;
+
+
+  }
+}
+
+.panel-background-orange{
+  background-color: @red-UNELCO-light;
+  h1,h2,h3,h4,h5,p {
+    color: @white;
+  }
+
+  margin: 20px;
+}
+
+.container-narrow{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+/* CUSTOMIZE Resizable IMAGE Gallery
+-------------------------------------------------- */
+.image-gallery {
+  ul {         
+      padding:0 0 0 0;
+      margin:0 0 0 0;
+  }
+  ul li {     
+      list-style:none;
+      margin-bottom:25px;           
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+  ul li img {
+      cursor: pointer;
+  }
+
+  img {
+    max-width:200px;
+    max-height:200px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+
+    vertical-align: middle;
+
+  }
+}
+
+  .image-center {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ #myModal {
+  .modal-body {
+      background-color: #111;
+  }
+
+
+  .controls{          
+    width:50px;
+    display:block;
+    font-size:11px;
+    padding-top:8px;
+    font-weight:bold;          
+}
+.next {
+    float:right;
+    text-align:right;
+}
+ } 
+
+/* RESPONSIVE CSS
+-----------------------------------------------------
+-----------------------------------------------------
+----------------------------------------------------- 
+----------------------------------------------------- */
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 20px;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-left:  15px;
+    padding-right: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-left:  0;
+    padding-right: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  /* Mrketing Feturette Sizing */
+  .featurette {
+    .featurette-heading {
+      font-size: 50px;
+    }
+    img{
+      height: 392px;
+      width: 392px;
+      .center-block();
+    }
+
+    .lead{
+      font-size: 20px;
+    }    
+  }
+
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  // Custom Image Resizing
+  .custom-images{
+    max-width: 500px;
+    max-height: 250px;
+  }
+
+  /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+  /* Reduce size of carousel content when on small mobile devices*/
+
+  .carousel-caption {
+
+    p {
+    margin-bottom: 10px;
+    font-size: @font-size-base;
+    }
+
+    .carousel-caption-header {
+    font-size: @font-size-large;
+    }
+  }
+
+  /* Hide Carousel Items on mobile screens */
+  .mobile-hidden {
+    .sr-only();
+  }
+
+  // Optional captions
+  // -----------------------------
+  // Hidden by default for smaller viewports
+  .carousel-caption {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 10px;
+    z-index: 10;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+    /* Carousel base class */
+  .carousel {
+    height: @carousel-size-height-small-devices;
+  }
+
+  /* Declare heights because of positioning of img element */
+  .carousel .item {
+    //width: 1140;
+    height: @carousel-size-height-small-devices;
+  }
+  .carousel-inner > .item > img {
+    height: @carousel-size-height-small-devices;
+  }
+
+  // Left/right controls for nav
+  // ---------------------------
+
+  .carousel-control {
+    // Set gradients for backgrounds
+
+    &.left {
+      //#gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+    }
+    &.right {
+      left: auto;
+      right: 0;
+      //#gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+    }
+
+    // Toggles
+    .icon-prev,
+    .icon-next,
+    .glyphicon-chevron-left,
+    .glyphicon-chevron-right {
+      top: @carousel-size-height-small-devices + 10px;
+    }
+  }
+
+  // Optional indicator pips
+  // ---------------------------
+
+  .carousel-indicators {
+
+    top: 310px;
+  }
+
+  /* Mrketing Feturette Sizing */
+  .featurette {
+    .featurette-heading {
+      font-size: 30px;
+    }
+
+    .text-muted{
+      font-size:  25px;
+    }
+
+    img{
+      width: 100%;
+      max-width: 200px;
+      .center-block();
+    }    
+  }
+
+
+  // Videos
+  .videos-mainvideo{
+    .center-block();
+
+    .video-wrapper {
+      iframe{
+        max-width: 500px;
+        max-height: 300px;
+      }
+
+      video{
+        max-width: 500px;
+        max-height: 300px;
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 640px) {
+
+  // Custom Image Resizing
+  .custom-images{
+    max-width: 250px;
+    max-height: 150px;
+  }
+
+
+  // Videos
+  .videos-mainvideo{
+    .center-block();
+
+    .video-wrapper {
+      iframe{
+        max-width: 250px;
+        max-height: 150px;
+      }
+
+      video{
+        max-width: 250px;
+        max-height: 150px;
+      }
+    }
+  }
+
+
+  .s-circle {
+    .center-block();
+    width:50px;
+    height: 50px;
+
+    padding:15px 0;
+    -webkit-border-radius:25px;
+    -moz-border-radius:25px;
+    border-radius:25px;
+    font-size:@font-size-h5;
+  }
+
+  .panel-background-orange{
+    h1,h2,h3,h4,h5,p {
+      font-size: @font-size-h3;
+    }
+  }
+
+/* CUSTOMIZE Resizable IMAGE Gallery
+-------------------------------------------------- */
+.image-gallery {
+
+  img {
+    max-width:100px;
+    max-height:100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+}
+
+
