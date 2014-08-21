@@ -158,31 +158,39 @@ code {
 }
 
 
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 @carousel-item-bg:                    transparent;
-@carousel-size-height:                410px;
+@carousel-size-height:                600px;
 @carousel-size-height-small-devices:  275px;
+@carousel-size-width:                 1400px;
+@carousel-size-width-small-devices:   375px;
+
 
 /* Carousel base class */
 .carousel {
-  height: @carousel-size-height;
-  margin-bottom: 60px;
+
+  margin-bottom:  60px;
+
 }
+
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
   //width: 1140;
-  height: @carousel-size-height;
+  height:           @carousel-size-height;
+  width:            %100;
   background-color: @carousel-item-bg;
 }
+
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: @carousel-size-height;
+
 }
 
 .carousel-indicators {
@@ -190,6 +198,7 @@ code {
     background-color: #a1a1a1;
   }
 }
+
 
 // Left/right controls for nav
 // ---------------------------
@@ -660,15 +669,19 @@ code {
     /* Carousel base class */
   .carousel {
     height: @carousel-size-height-small-devices;
+    width: @carousel-size-width-small-devices;
+
   }
 
   /* Declare heights because of positioning of img element */
   .carousel .item {
     //width: 1140;
     height: @carousel-size-height-small-devices;
+    width: @carousel-size-width-small-devices;
   }
   .carousel-inner > .item > img {
     height: @carousel-size-height-small-devices;
+    width: @carousel-size-width-small-devices;
   }
 
   // Left/right controls for nav
